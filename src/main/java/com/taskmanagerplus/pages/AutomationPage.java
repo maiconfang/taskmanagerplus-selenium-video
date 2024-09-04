@@ -16,6 +16,15 @@ public class AutomationPage {
 
     @FindBy(id = "automation-link-typeahead")
     WebElement linkTypeahead;
+    
+    @FindBy(id = "automation-link-input-form")
+    WebElement linkInputForm;
+    
+    @FindBy(linkText = "Input Form")
+    WebElement linkInputFormByLinkText;
+    
+    @FindBy(partialLinkText = "Input")
+    private WebElement linkInputFormByPartialLinkText;
 
     
     /**
@@ -33,6 +42,18 @@ public class AutomationPage {
 
     public void clickLinkTypeahead() {
     	linkTypeahead.click();
+    }
+    
+    public void clickLinkInputForm() {
+    	linkInputForm.click();
+    }
+    
+    public void clickLinkInputFormByLinkText() {
+    	linkInputFormByLinkText.click();
+    }
+    
+    public void clickLinkInputFormByPartialLinkText() {
+    	linkInputFormByPartialLinkText.click();
     }
     
     
